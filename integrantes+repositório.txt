@@ -1,0 +1,26 @@
+Turma: 1CCPY
+
+Integrantes:
+- Arthur Primo Brandão - RM: 573572
+- Felipe Gouveia Braga - RM: 568956
+- Leandro Cavaccini Brito - RM: 570556
+- Lucas Dorice Dos Santos - RM: 568692
+- Vinicius de Oliveira Coppola - RM: 571699
+
+Link do Repositório GitHub:
+https://github.com/ViniciusCoppola/pai-sprint-4
+
+Arquivos desta entrega:
+- pipeline_avaliacao.py     (script principal de avaliação sistematizada via LLM-as-a-judge, contendo o Golden Dataset embutido)
+- resultados_sprint04.md    (tabela com as notas, justificativas e métricas geradas pelo pipeline automatizado)
+- Relatorio_Sprint04.pdf    (relatório final obrigatório contendo a metodologia, classificação dos modelos e comparativo)
+- chatbot_agent.py          (núcleo conversacional refatorado com LangChain, herdado da Sprint 3)
+- guardrails.py             (camada de segurança e validação de escopo, herdada da Sprint 3)
+- README.md                 (documentação de apresentação do repositório com o roadmap e instruções)
+- requirements.txt          (dependências atualizadas necessárias para a execução do projeto)
+- .gitignore                (proteção do repositório contra vazamento de chaves de API e cache)
+
+Observação: Os resultados documentados em `resultados_sprint04.md` e analisados no `Relatorio_Sprint04.pdf` são frutos diretos da execução do script `pipeline_avaliacao.py`. Caso seja necessária a reexecução do pipeline para verificação, é estritamente necessário configurar uma variável de ambiente `GROQ_API_KEY` válida. O script já foi instrumentado com pausas assíncronas (time.sleep) para mitigar quedas de requisição devido aos rate limits da API gratuita durante a execução concorrente dos modelos e do avaliador.
+
+Nota sobre Reprodutibilidade:
+Por se tratar de um pipeline automatizado que consome a API em nuvem da Groq via endpoints dinâmicos, uma eventual reexecução do script pipeline_avaliacao.py pelo avaliador pode gerar resultados ligeiramente diferentes da tabela estática entregue. Isso ocorre devido à oscilação de disponibilidade dos modelos no catálogo gratuito da Groq, flutuações de rede (Rate Limits e erros 429) no momento do teste, e a natureza intrinsecamente não-determinística do LLM-as-a-judge. O arquivo resultados_sprint04.md e o relatório em PDF refletem o snapshot exato da nossa rodada oficial de testes para a consolidação das métricas.
