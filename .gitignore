@@ -1,0 +1,23 @@
+# Chaves e credenciais (CRÍTICO PARA NÃO PERDER PONTO)
+.env
+.env.*
+secrets.json
+
+# Caches do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambientes Virtuais (se vocês usarem)
+venv/
+.venv/
+env/
+.env_python/
+
+# Arquivos do Jupyter Notebook / Kaggle
+.ipynb_checkpoints/
+
+# Arquivos de Sistema e IDEs (VS Code, Mac, etc)
+.vscode/
+.idea/
+.DS_Store
