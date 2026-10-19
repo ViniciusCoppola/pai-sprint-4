@@ -24,7 +24,6 @@
 
 - Arthur Primo Brandão - RM: 573572
 - Felipe Gouveia Braga - RM: 568956
-- Isaías Hörlle Sobral - RM: 568990
 - Leandro Cavaccini Brito - RM: 570556
 - Lucas Dorice Dos Santos - RM: 568692
 - Vinicius de Oliveira Coppola - RM: 571699
